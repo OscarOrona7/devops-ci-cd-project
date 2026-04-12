@@ -4,5 +4,21 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
+  },
+  "description": "DevOps AWS Project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarOrona7/devops-ci-cd-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OscarOrona7/devops-ci-cd-project/issues"
+  },
+  "homepage": "https://github.com/OscarOrona7/devops-ci-cd-project#readme",
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }

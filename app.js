@@ -1,14 +1,15 @@
-const http = require('http');
-
-const hostname = '0.0.0.0';
+const express = require('express');
+const app = express();
 const port = 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>CI/CD DevOps Project 🚀</h1><p>Deployed via AWS + GitHub Actions</p>');
+app.get('/', (req, res) => {
+  res.send('<h1>CI/CD DevOps Project 🚀</h1><p>Now using Express + AWS + GitHub Actions</p>');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
+app.listen(port, () => {
+  console.log(`App running on http://localhost:${port}`);
 });
